@@ -11,3 +11,6 @@ monitoring.ui.container.elasticsearch.enabled: true
 #
 elasticsearch.username: elastic
 elasticsearch.password: changeme
+
+# 中文
+i18n.locale: "zh-CN"
