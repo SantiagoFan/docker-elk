@@ -56,10 +56,10 @@
    * [How to disable paid features](#how-to-disable-paid-features)
    * [How to scale out the Elasticsearch cluster](#how-to-scale-out-the-elasticsearch-cluster)
    * [How to reset a password programmatically](#how-to-reset-a-password-programmatically)
-1. [Extensibility](#extensibility)
-   * [How to add plugins](#how-to-add-plugins)
-   * [How to enable the provided extensions](#how-to-enable-the-provided-extensions)
-1. [JVM tuning](#jvm-tuning)
+1. [可拓展性](#可拓展性)
+   * [如何添加插件](#如何添加插件)
+   * [如何启用提供的扩展](#如何启用提供的扩展)
+1. [JVM 调优](#jvm-调优)
    * [How to specify the amount of memory used by a service](#how-to-specify-the-amount-of-memory-used-by-a-service)
    * [How to enable a remote JMX connection to a service](#how-to-enable-a-remote-jmx-connection-to-a-service)
 1. [Going further](#going-further)
@@ -323,9 +323,9 @@ $ curl -XPOST -D- 'http://localhost:9200/_security/user/elastic/_password' \
     -d '{"password" : "<your new password>"}'
 ```
 
-## Extensibility
+## 可拓展性
 
-### How to add plugins
+### 如何添加插件
 
 To add plugins to any ELK component you have to:
 
@@ -333,7 +333,7 @@ To add plugins to any ELK component you have to:
 1. Add the associated plugin code configuration to the service configuration (eg. Logstash input/output)
 1. Rebuild the images using the `docker-compose build` command
 
-### How to enable the provided extensions
+### 如何启用提供的扩展
 
 A few extensions are available inside the [`extensions`](extensions) directory. These extensions provide features which
 are not part of the standard Elastic stack, but can be used to enrich it with extra integrations.
@@ -341,7 +341,7 @@ are not part of the standard Elastic stack, but can be used to enrich it with ex
 The documentation for these extensions is provided inside each individual subdirectory, on a per-extension basis. Some
 of them require manual changes to the default ELK configuration.
 
-## JVM tuning
+## JVM 调优
 
 ### How to specify the amount of memory used by a service
 
@@ -386,7 +386,7 @@ logstash:
     LS_JAVA_OPTS: -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.port=18080 -Dcom.sun.management.jmxremote.rmi.port=18080 -Djava.rmi.server.hostname=DOCKER_HOST_IP -Dcom.sun.management.jmxremote.local.only=false
 ```
 
-## Going further
+## 进一步学习
 
 ### Plugins and integrations
 
