@@ -13,13 +13,13 @@ enabled by default (see [How to disable paid features](#how-to-disable-paid-feat
 license][trial-license] is valid for 30 days**. After this license expires, you can continue using the free features
 seamlessly, without losing any data.*
 
-Based on the official Docker images from Elastic:
+基于从 Elastic 官方的镜像:
 
 * [Elasticsearch](https://github.com/elastic/elasticsearch/tree/master/distribution/docker)
 * [Logstash](https://github.com/elastic/logstash/tree/master/docker)
 * [Kibana](https://github.com/elastic/kibana/tree/master/src/dev/build/tasks/os_packages/docker_generator)
 
-Other available stack variants:
+其他可以的变体:
 
 * [`tls`](https://github.com/deviantony/docker-elk/tree/tls): TLS encryption enabled in Elasticsearch.
 * [`searchguard`](https://github.com/deviantony/docker-elk/tree/searchguard): Search Guard support
@@ -30,28 +30,28 @@ Other available stack variants:
 
 我们的目标是为任何想要尝试的人提供进入Elastic堆栈这些强大的技术组合的最简单的方法。这个项目的默认配置是有目的的最小化和非自定义的。它不依赖任何外部依赖或自定义自动化来启动和运行。
 
-Instead, we believe in good documentation so that you can use this repository as a template, tweak it, and make it _your
+相反, we believe in good documentation so that you can use this repository as a template, tweak it, and make it _your
 own_. [sherifabdlnaby/elastdocker][elastdocker] is one example among others of project that builds upon this idea.
 
 ---
 
-## Contents
+## 内容
 
-1. [Requirements](#requirements)
-   * [Host setup](#host-setup)
+1. [依赖](#requirements)
+   * [主机启动](#host-setup)
    * [SELinux](#selinux)
    * [Docker for Desktop](#docker-for-desktop)
      * [Windows](#windows)
      * [macOS](#macos)
 1. [Usage](#usage)
-   * [Version selection](#version-selection)
-   * [Bringing up the stack](#bringing-up-the-stack)
-   * [Cleanup](#cleanup)
+   * [版本选择](#version-selection)
+   * [启动堆栈](#bringing-up-the-stack)
+   * [清理](#cleanup)
    * [Initial setup](#initial-setup)
      * [Setting up user authentication](#setting-up-user-authentication)
      * [Injecting data](#injecting-data)
      * [Default Kibana index pattern creation](#default-kibana-index-pattern-creation)
-1. [Configuration](#configuration)
+1. [配置](#configuration)
    * [How to configure Elasticsearch](#how-to-configure-elasticsearch)
    * [How to configure Kibana](#how-to-configure-kibana)
    * [How to configure Logstash](#how-to-configure-logstash)
@@ -68,7 +68,7 @@ own_. [sherifabdlnaby/elastdocker][elastdocker] is one example among others of p
    * [Plugins and integrations](#plugins-and-integrations)
    * [Swarm mode](#swarm-mode)
 
-## Requirements
+## 依赖
 
 ### Host setup
 
