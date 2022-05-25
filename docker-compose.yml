@@ -50,6 +50,7 @@ services:
       LS_JAVA_OPTS: "-Xmx256m -Xms256m"
     networks:
       - elk
+    # 依赖服务一
     depends_on:
       - elasticsearch
   # 服务三：kibana

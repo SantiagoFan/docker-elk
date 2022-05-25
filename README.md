@@ -4,10 +4,9 @@
 [![Build Status](https://github.com/deviantony/docker-elk/workflows/CI/badge.svg?branch=main)](https://github.com/deviantony/docker-elk/actions?query=workflow%3ACI+branch%3Amain)
 [![Join the chat at https://gitter.im/deviantony/docker-elk](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/deviantony/docker-elk?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-Run the latest version of the [Elastic stack][elk-stack] with Docker and Docker Compose.
+用 Docker 和 Docker Compose.运行最新版本的 [Elastic stack][elk-stack]
 
-It gives you the ability to analyze any data set by using the searching/aggregation capabilities of Elasticsearch and
-the visualization power of Kibana.
+通过使用Elasticsearch的搜索/聚合功能和Kibana的可视化功能，您可以分析任何数据集。
 
 *:information_source: The Docker images backing this stack include [X-Pack][xpack] with [paid features][paid-features]
 enabled by default (see [How to disable paid features](#how-to-disable-paid-features) to disable them). **The [trial
@@ -27,11 +26,9 @@ Other available stack variants:
 
 ---
 
-## Philosophy
+## 基本原理 Philosophy
 
-We aim at providing the simplest possible entry into the Elastic stack for anybody who feels like experimenting with
-this powerful combo of technologies. This project's default configuration is purposely minimal and unopinionated. It
-does not rely on any external dependency or custom automation to get things up and running.
+我们的目标是为任何想要尝试的人提供进入Elastic堆栈这些强大的技术组合的最简单的方法。这个项目的默认配置是有目的的最小化和非自定义的。它不依赖任何外部依赖或自定义自动化来启动和运行。
 
 Instead, we believe in good documentation so that you can use this repository as a template, tweak it, and make it _your
 own_. [sherifabdlnaby/elastdocker][elastdocker] is one example among others of project that builds upon this idea.
