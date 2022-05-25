@@ -8,10 +8,9 @@
 
 通过使用Elasticsearch的搜索/聚合功能和Kibana的可视化功能，您可以分析任何数据集。
 
-*:information_source: The Docker images backing this stack include [X-Pack][xpack] with [paid features][paid-features]
-enabled by default (see [How to disable paid features](#how-to-disable-paid-features) to disable them). **The [trial
-license][trial-license] is valid for 30 days**. After this license expires, you can continue using the free features
-seamlessly, without losing any data.*
+*:温馨提示: 这个 docker 镜像 backing this stack include [X-Pack][xpack] 包含 [付费功能][paid-features]
+默认是启动的 (see [如何关闭付费功能](#how-to-disable-paid-features) to disable them). **这个 [试用授权][trial-license] 可以使用 30 天**. 授权过期后, 你可以继续无缝使用那些免费的功能
+, 不会丢失任何数据.*
 
 基于从 Elastic 官方的镜像:
 
@@ -30,8 +29,7 @@ seamlessly, without losing any data.*
 
 我们的目标是为任何想要尝试的人提供进入Elastic堆栈这些强大的技术组合的最简单的方法。这个项目的默认配置是有目的的最小化和非自定义的。它不依赖任何外部依赖或自定义自动化来启动和运行。
 
-相反, we believe in good documentation so that you can use this repository as a template, tweak it, and make it _your
-own_. [sherifabdlnaby/elastdocker][elastdocker] is one example among others of project that builds upon this idea.
+相反, 我们相信良好的文档，这样你就可以把这个存储库作为模板，, 调整它, 并且 构建你自己的. [sherifabdlnaby/elastdocker][elastdocker] 就是一个例子，它就是建立在这个想法上的.
 
 ---
 
@@ -52,9 +50,9 @@ own_. [sherifabdlnaby/elastdocker][elastdocker] is one example among others of p
      * [Injecting data](#injecting-data)
      * [Default Kibana index pattern creation](#default-kibana-index-pattern-creation)
 1. [配置](#configuration)
-   * [How to configure Elasticsearch](#how-to-configure-elasticsearch)
-   * [How to configure Kibana](#how-to-configure-kibana)
-   * [How to configure Logstash](#how-to-configure-logstash)
+   * [如何配置 Elasticsearch](#how-to-configure-elasticsearch)
+   * [如何配置 Kibana](#how-to-configure-kibana)
+   * [如何配置 Logstash](#how-to-configure-logstash)
    * [How to disable paid features](#how-to-disable-paid-features)
    * [How to scale out the Elasticsearch cluster](#how-to-scale-out-the-elasticsearch-cluster)
    * [How to reset a password programmatically](#how-to-reset-a-password-programmatically)
@@ -266,7 +264,7 @@ first time.
 *:information_source: Configuration is not dynamically reloaded, you will need to restart individual components after
 any configuration change.*
 
-### How to configure Elasticsearch
+### 如何配置 Elasticsearch
 
 The Elasticsearch configuration is stored in [`elasticsearch/config/elasticsearch.yml`][config-es].
 
@@ -280,26 +278,26 @@ elasticsearch:
     cluster.name: my-cluster
 ```
 
-Please refer to the following documentation page for more details about how to configure Elasticsearch inside Docker
+Please refer to the following documentation page for more details about 如何配置 Elasticsearch inside Docker
 containers: [Install Elasticsearch with Docker][es-docker].
 
-### How to configure Kibana
+### 如何配置 Kibana
 
 The Kibana default configuration is stored in [`kibana/config/kibana.yml`][config-kbn].
 
 It is also possible to map the entire `config` directory instead of a single file.
 
-Please refer to the following documentation page for more details about how to configure Kibana inside Docker
+Please refer to the following documentation page for more details about 如何配置 Kibana inside Docker
 containers: [Install Kibana with Docker][kbn-docker].
 
-### How to configure Logstash
+### 如何配置 Logstash
 
 The Logstash configuration is stored in [`logstash/config/logstash.yml`][config-ls].
 
 It is also possible to map the entire `config` directory instead of a single file, however you must be aware that
 Logstash will be expecting a [`log4j2.properties`][log4j-props] file for its own logging.
 
-Please refer to the following documentation page for more details about how to configure Logstash inside Docker
+Please refer to the following documentation page for more details about 如何配置 Logstash inside Docker
 containers: [Configuring Logstash for Docker][ls-docker].
 
 ### How to disable paid features
